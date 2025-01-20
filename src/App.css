@@ -1,0 +1,495 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.display-2xl-regular,
+.display-2xl-medium,
+.display-2xl-semibold,
+.display-2xl-bold {
+  /* Display 2xl */
+  font-size: 72px;
+  font-family: 'Inter', sans-serif;
+  line-height: 90px;
+  word-wrap: break-word
+}
+
+.display-2xl-regular {
+  /* Display 2xl/Regular */
+  font-weight: 400;
+}
+
+.display-2xl-medium {
+  /* Display 2xl/Medium */
+  font-weight: 500;
+}
+
+.display-2xl-semibold {
+  /* Display 2xl/Semibold */
+  font-weight: 600;
+}
+
+.display-2xl-bold {
+  /* Display 2xl/Bold */
+  font-weight: 700;
+}
+
+.display-xl-regular,
+.display-xl-medium,
+.display-xl-semibold,
+.display-xl-bold {
+  /* Display xl */
+  font-size: 60px;
+  font-family: 'Inter', sans-serif;
+  line-height: 72px;
+  word-wrap: break-word
+}
+
+.display-xl-regular {
+  /* Display xl/Regular */
+  font-weight: 400;
+}
+
+.display-xl-medium {
+  /* Display xl/Medium */
+  font-weight: 500;
+}
+
+.display-xl-semibold {
+  /* Display xl/Semibold */
+  font-weight: 600;
+}
+
+.display-xl-bold {
+  /* Display xl/Bold */
+  font-weight: 700;
+}
+
+.display-lg-regular,
+.display-lg-medium,
+.display-lg-semibold,
+.display-lg-bold {
+  /* Display lg */
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+  line-height: 60px;
+  word-wrap: break-word
+}
+
+.display-lg-regular {
+  /* Display lg/Regular */
+  font-weight: 400;
+}
+
+.display-lg-medium {
+  /* Display lg/Medium */
+  font-weight: 500;
+}
+
+.display-lg-semibold {
+  /* Display lg/Semibold */
+  font-weight: 600;
+}
+
+.display-lg-bold {
+  /* Display lg/Bold */
+  font-weight: 700;
+}
+
+.display-md-regular,
+.display-md-medium,
+.display-md-semibold,
+.display-md-bold {
+  /* Display md */
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  line-height: 44px;
+  word-wrap: break-word
+}
+
+.display-md-regular {
+  /* Display md/Regular */
+  font-weight: 400;
+}
+
+.display-md-medium {
+  /* Display md/Medium */
+  font-weight: 500;
+}
+
+.display-md-semibold {
+  /* Display md/Semibold */
+  font-weight: 600;
+}
+
+.display-md-bold {
+  /* Display md/Bold */
+  font-weight: 700;
+}
+
+.display-sm-regular,
+.display-sm-medium,
+.display-sm-semibold,
+.display-sm-bold {
+  /* Display sm */
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  line-height: 38px;
+  word-wrap: break-word
+}
+
+.display-sm-regular {
+  /* Display sm/Regular */
+  font-weight: 400;
+}
+
+.display-sm-medium {
+  /* Display sm/Medium */
+  font-weight: 500;
+}
+
+.display-sm-semibold {
+  /* Display sm/Semibold */
+  font-weight: 600;
+}
+
+.display-sm-bold {
+  /* Display sm/Bold */
+  font-weight: 700;
+}
+
+.display-xs-regular,
+.display-xs-medium,
+.display-xs-semibold,
+.display-xs-bold {
+  /* Display xs */
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  line-height: 32px;
+  word-wrap: break-word
+}
+
+.display-xs-regular {
+  /* Display xs/Regular */
+  font-weight: 400;
+}
+
+.display-xs-medium {
+  /* Display xs/Medium */
+  font-weight: 500;
+}
+
+.display-xs-semibold {
+  /* Display xs/Semibold */
+  font-weight: 600;
+}
+
+.display-xs-bold {
+  /* Display xs/Bold */
+  font-weight: 700;
+}
+
+.text-xl-regular,
+.text-xl-medium,
+.text-xl-semibold,
+.text-xl-bold {
+  /* Text xl */
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  line-height: 30px;
+  word-wrap: break-word
+}
+
+.text-xl-regular {
+  /* Text xl/Regular */
+  font-weight: 400;
+}
+
+.text-xl-medium {
+  /* Text xl/Medium */
+  font-weight: 500;
+}
+
+.text-xl-semibold {
+  /* Text xl/Semibold */
+  font-weight: 600;
+}
+
+.text-xl-bold {
+  /* Text xl/Bold */
+  font-weight: 700;
+}
+
+.text-lg-regular,
+.text-lg-medium,
+.text-lg-semibold,
+.text-lg-bold {
+  /* Text lg */
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  line-height: 28px;
+  word-wrap: break-word
+}
+
+.text-lg-regular {
+  /* Text lg/Regular */
+  font-weight: 400;
+}
+
+.text-lg-medium {
+  /* Text lg/Medium */
+  font-weight: 500;
+}
+
+.text-lg-semibold {
+  /* Text lg/Semibold */
+  font-weight: 600;
+}
+
+.text-lg-bold {
+  /* Text lg/Bold */
+  font-weight: 700;
+}
+
+.text-md-regular,
+.text-md-medium,
+.text-md-semibold,
+.text-md-bold {
+  /* Text md */
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  line-height: 24px;
+  word-wrap: break-word
+}
+
+.text-md-regular {
+  /* Text md/Regular */
+  font-weight: 400;
+}
+
+.text-md-medium {
+  /* Text md/Medium */
+  font-weight: 500;
+}
+
+.text-md-semibold {
+  /* Text md/Semibold */
+  font-weight: 600;
+}
+
+.text-md-bold {
+  /* Text md/Bold */
+  font-weight: 700;
+}
+
+.text-sm-regular,
+.text-sm-medium,
+.text-sm-semibold,
+.text-sm-bold {
+  /* Text sm */
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  line-height: 20px;
+  word-wrap: break-word
+}
+
+.text-sm-regular {
+  /* Text sm/Regular */
+  font-weight: 400;
+}
+
+.text-sm-medium {
+  /* Text sm/Medium */
+  font-weight: 500;
+}
+
+.text-sm-semibold {
+  /* Text sm/Semibold */
+  font-weight: 600;
+}
+
+.text-sm-bold {
+  /* Text sm/Bold */
+  font-weight: 700;
+}
+
+.text-xs-regular,
+.text-xs-medium,
+.text-xs-semibold,
+.text-xs-bold {
+  /* Text xs */
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  line-height: 18px;
+  word-wrap: break-word
+}
+
+.text-xs-regular {
+  /* Text xs/Regular */
+  font-weight: 400;
+}
+
+.text-xs-medium {
+  /* Text xs/Medium */
+  font-weight: 500;
+}
+
+.text-xs-semibold {
+  /* Text xs/Semibold */
+  font-weight: 600;
+}
+
+.text-xs-bold {
+  /* Text xs/Bold */
+  font-weight: 700;
+}
+
+#default.Toastify .Toastify__toast-container {
+  padding: 0;
+  width: 800px;
+}
+
+#default.Toastify .Toastify__toast-container .Toastify__toast {
+  overflow: inherit !important;
+}
+
+#default .Toastify__toast-body {
+  padding: 0;
+}
+
+#default .Toastify__toast-theme--light.Toastify__toast--default {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.simplebar-content {
+  height: 100%;
+  width: 100%;
+}
+
+
+.rdrCalendarWrapper {
+  display: flex;
+}
+
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrMonthAndYearWrapper {
+  height: 100%;
+  padding-top: 0;
+}
+
+.rdrMonth {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.rdrMonths.rdrMonthsVertical .rdrWeekDays span.rdrWeekDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  word-wrap: break-word;
+  color: #344054;
+}
+
+.rdrDays {
+  row-gap: 4px;
+}
+
+.rdrDay {
+  height: 40px;
+}
+
+.rdrDay .rdrSelected {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+}
+
+.rdrDayPassive .rdrDayNumber span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word;
+  color: #667085;
+}
+
+.rdrDay .rdrDayNumber,
+.rdrDayToday .rdrDayNumber span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word;
+  color: #344054;
+}
+
+.rdrDay .rdrDayNumber {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+}
+
+.rdrCalendarWrapper:not(.rdrDateRangeWrapper) .rdrDayHovered .rdrDayNumber:after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 9999px;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #dc2626;
+}
+
+
+.rdrDayStartOfMonth .rdrDayInPreview,
+.rdrDayStartOfMonth .rdrDayEndPreview,
+.rdrDayStartOfWeek .rdrDayInPreview,
+.rdrDayStartOfWeek .rdrDayEndPreview,
+.rdrDayEndOfMonth .rdrDayInPreview,
+.rdrDayEndOfMonth .rdrDayStartPreview,
+.rdrDayEndOfWeek .rdrDayInPreview,
+.rdrDayEndOfWeek .rdrDayStartPreview,
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 9999px;
+}
+
+.react-modal-sheet-container {
+  overflow: hidden;
+  border-top-right-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+  box-shadow:none !important;
+}
