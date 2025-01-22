@@ -39,7 +39,7 @@ import ReactPlayer from "react-player";
         }
     }, [detail]);
         return (
-            <div style={{width : "800"}} className="bg-white w-full min-w-[800px] max-h-[90vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+            <div className="bg-white w-full min-w-[800px] min-h-[60vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
                         <ReactPlayer
                 url="/sounds/winning.mp3" // Replace with the actual path to the winning sound file
                 playing={playWinningSound}
@@ -48,7 +48,7 @@ import ReactPlayer from "react-player";
                 height={0}
                 width={0}
             />
-                <SimpleBar forceVisible="y" style={{ maxHeight: "90vh" }} className="w-full">
+                <SimpleBar forceVisible="y" style={{ maxHeight: "100vh" }} className="w-full">
                     <div className="flex flex-col w-full">
                         <div className="relative h-20 w-full flex items-center justify-center">
                             <MyBgPatternDecorativeCircle></MyBgPatternDecorativeCircle>
@@ -62,7 +62,7 @@ import ReactPlayer from "react-player";
                                 <p className="display-sm-semibold text-brand/600">{detail && detail?.identifier_code.split('').join(' ')}</p>
                             </div>
                         </div>
-                        <div className="z-30 w-full h-[143px] flex items-center justify-center">
+                        <div className="z-30 w-full h-[350px] flex items-center justify-center">
                             <div className="h-full w-full max-w-[261px]">
                                 {rafflePrize && rafflePrize.photo ? <div className="w-full h-full">
                                     <img className="w-full h-full object-cover" src={convertUrlImage(rafflePrize.photo)} alt="" />

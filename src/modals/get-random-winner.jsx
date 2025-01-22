@@ -116,7 +116,7 @@ const Modal = ({ data = {}, done, close }) => {
   }, [isLotteryRunning]);
 
   return (
-    <div className="bg-white w-full max-h-[480px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+    <div className="bg-white w-full max-h-[480px] min-h-[60vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
       <SimpleBar
         forceVisible="y"
         style={{ maxHeight: "480px" }}
