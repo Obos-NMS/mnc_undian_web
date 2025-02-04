@@ -70,14 +70,45 @@ import ReactPlayer from "react-player";
                             </div>
                         </div>
                         <div className="z-30">
-                            {detail && <MyDetailView datas={detail.participant_field_values
-                            .filter(item => item.participant_field_name.name !== 'No. Urut')
-                                .sort((a, b) => a.participant_field_name.index - b.participant_field_name.index)
-                                .reduce((acc, item) => {
-                                    acc[item.participant_field_name.name] = item.value;
-                                    return acc;
-                                }, {})} />}
-                        </div>
+    {detail && (
+        <MyDetailView
+            datas={detail.participant_field_values
+                .filter(
+                    (item) =>
+                        item.participant_field_name.name !== "No. Urut" &&
+                        item.participant_field_name.name !== "Nama Cabang"
+                )
+                
+                .sort((a, b) => a.participant_field_name.index - b.participant_field_name.index)
+                .reduce((acc, item) => {
+                    // Masking logic for item.value
+                    let maskedValue = item.value;
+                
+                    // Check if value is a string and has sufficient length to mask
+                    if (typeof item.value === "string" && item.value.length > 1) {
+                        // Convert value to array to manipulate characters
+                        let valueArray = item.value.split("");
+                        const maskCount = Math.floor(item.value.length / 2); // Mask half of the length randomly
+                        
+                        for (let i = 0; i < maskCount; i++) {
+                            // Generate random index to replace with an asterisk
+                            const randomIndex = Math.floor(Math.random() * valueArray.length);
+                            valueArray[randomIndex] = "*";
+                        }
+                        maskedValue = valueArray.join("");
+                    }
+                
+                    acc[item.participant_field_name.name] = maskedValue;
+                
+                    console.log(item.value, "Original Value");
+                    console.log(maskedValue, "Masked Value");
+                    return acc;
+                }, {})
+                }
+        />
+    )}
+</div>
+
                         <footer className="pt-8">
                             <hr className="border-gray-light/200" />
                             <div className="p-6 flex items-center gap-3">
