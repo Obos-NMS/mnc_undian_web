@@ -32,11 +32,36 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
       .catch(myToaster);
   };
 
+  // Play the winning sound when the modal is opened
   useEffect(() => {
     if (detail) {
       setPlayWinningSound(true);
     }
   }, [detail]);
+
+  // Handle Space key press to trigger the "Simpan" or "Tidak simpan" button action
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === " " || event.key === "Spacebar") { // Space key
+        event.preventDefault(); // Prevent default behavior of Space key (scrolling, etc.)
+        
+        // Trigger the "Simpan" action if detail and rafflePrize are available
+        if (detail && rafflePrize) {
+          setWinner("valid");
+        } else {
+          close && close(); // Trigger the "Tidak simpan" action
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener when component unmounts
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [detail, rafflePrize, close]); // Ensure this effect runs when the detail or rafflePrize changes
+
   return (
     <div className="bg-white min-w-[800px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
       <ReactPlayer
@@ -63,7 +88,6 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
               <p className="text-lg-semibold text-gray-light/900">
                 Selamat! kepada semua pemenang
               </p>
-              {/* <p className="display-sm-semibold text-brand/600">{detail && detail?.identifier_code.split('').join(' ')}</p> */}
             </div>
           </div>
           <div className="z-30 w-full h-[143px] flex items-center justify-center">
@@ -89,38 +113,6 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
           <footer className="pt-8">
             <hr className="border-gray-light/200" />
             <div className="p-6 flex items-center gap-3">
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             
               <MyButton
                 disabled={!detail || !rafflePrize}
                 expanded
