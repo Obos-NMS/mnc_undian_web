@@ -79,8 +79,9 @@ const Modal = ({ data = {}, done, close }) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.code === "Space" && !isFetching) {
-      if (isLotteryRunning) {
+    if (event.code === "Space" && !isFetching ) {
+      console.log(isFetching, 'kqwkkqemememekqwek')
+      if (isLotteryRunning === true) {
         stopLottery();
       } else {
         startLottery();
@@ -108,15 +109,16 @@ const Modal = ({ data = {}, done, close }) => {
     }
   
     window.addEventListener("keydown", handleKeyDown);
-  
+    
     return () => {
-      clearInterval(intervalId);
       window.removeEventListener("keydown", handleKeyDown);
+      clearInterval(intervalId);
     };
   }, [isLotteryRunning]);
 
   return (
     <div className="bg-white w-full max-h-[480px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <SimpleBar
         forceVisible="y"
         style={{ maxHeight: "480px" }}

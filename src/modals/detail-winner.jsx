@@ -66,7 +66,7 @@ import ReactPlayer from "react-player";
              
                         <div className="z-30 p-6 flex flex-col items-center justify-center text-center">
                             <div className="flex flex-col gap-1">
-                                <p className="text-lg-semibold text-gray-light/900">Selamat! kepada pemenang dengan nomor undian</p>
+                                <p className="text-xl-semibold text-gray-light/900">Selamat! kepada pemenang dengan nomor undian</p>
                                 <p className="display-sm-semibold text-brand/600">{detail && detail?.identifier_code.split('').join(' ')}</p>
                             </div>
                         </div>
@@ -77,11 +77,10 @@ import ReactPlayer from "react-player";
                                 </div> : <p className="text-sm-medium text-gray-light/700">Foto tidak ditemukan</p>}
                             </div>
                         </div>
-                        <div className="z-30">
+                        <div className="z-30 text-xl">
     {detail && (
         <MyDetailView
-            datas={detail.participant_field_values
-                .filter(
+            datas={detail.participant_field_values.filter(
                     (item) =>
                         item.participant_field_name.name !== "No. Urut" &&
                         item.participant_field_name.name !== "Nama Cabang"
@@ -113,6 +112,7 @@ import ReactPlayer from "react-player";
                     return acc;
                 }, {})
                 }
+                className="text-xl" 
         />
     )}
 </div>
