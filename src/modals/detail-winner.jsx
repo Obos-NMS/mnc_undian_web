@@ -70,8 +70,8 @@ import ReactPlayer from "react-player";
                                 <p className="display-sm-semibold text-brand/600">{detail && detail?.identifier_code.split('').join(' ')}</p>
                             </div>
                         </div>
-                        <div className="z-30 w-full h-[250px] flex items-center justify-center">
-                            <div className="h-full w-full max-w-full">
+                        <div className="z-30 w-full h-[300px] flex items-center justify-center">
+                            <div className="h-full w-full max-w-[500px]">
                                 {rafflePrize && rafflePrize.photo ? <div className="w-full h-full">
                                     <img className="w-full h-full object-cover" src={convertUrlImage(rafflePrize.photo)} alt="" />
                                 </div> : <p className="text-sm-medium text-gray-light/700">Foto tidak ditemukan</p>}
