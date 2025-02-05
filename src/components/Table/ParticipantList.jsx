@@ -42,7 +42,7 @@ const ParticipantList = (winners) => {
         field="identifier_code"
         header="Kode unik undian"
         body={(value) => (
-          <p className="text-gray-light/900 text-sm-medium">
+          <p className="text-gray-light/900 text-3xl">
             {value?.identifier_code}
           </p>
         )}
@@ -57,7 +57,7 @@ const ParticipantList = (winners) => {
               (field) => field.participant_field_name.id === column.id
             );
             return (
-              <p className="text-gray-light/900 text-sm-regular truncate">
+              <p className="text-gray-light/900 text-3xl truncate">
                 {fieldValue?.value ?? ""}
               </p>
             );

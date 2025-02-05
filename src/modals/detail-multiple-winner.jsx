@@ -85,7 +85,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
           </div>
           <div className="z-30 p-6 flex flex-col items-center justify-center text-center">
             <div className="flex flex-col gap-1">
-              <p className="text-lg-semibold text-gray-light/900">
+              <p className="text-xl-semibold text-gray-light/900">
                 Selamat! kepada semua pemenang
               </p>
             </div>
@@ -108,7 +108,8 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
             </div>
           </div>
           <div className="z-30">
-            <ParticipantList participants={detail} />
+            <p className="text-lg">
+              <ParticipantList className="text-[18px]" participants={detail}  /> </p>
           </div>
           <footer className="pt-8">
             <hr className="border-gray-light/200" />
