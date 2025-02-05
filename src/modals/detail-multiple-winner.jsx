@@ -78,7 +78,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
                 </div>
               ) : (
                 <p className="text-sm-medium text-gray-light/700">
-                  Foto Monyet
+                  Foto tidak ditemukan
                 </p>
               )}
             </div>
