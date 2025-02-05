@@ -33,7 +33,7 @@ const Content = ({ closeToast, toastProps,
                 {toasterIcon && <div>{toasterIcon}</div>}
                 <div className='flex flex-col gap-3 w-full'>
                     <div className='w-full flex flex-col gap-y-1'>
-                        <p className='text-gray-light/900 text-sm-semibold'>{title ?? 'Information'}</p>
+                        <p className='text-gray-light/900 text-sm-semibold'>{title ?? 'Sukses Menyimpan'}</p>
                         <p className='text-gray-light/700 text-sm-regular line-clamp-2 whitespace-pre-line'
                             dangerouslySetInnerHTML={{ __html: message ?? 'Something wrong!' }}></p>
                     </div>
