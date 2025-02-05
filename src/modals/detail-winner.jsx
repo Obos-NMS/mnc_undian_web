@@ -71,7 +71,7 @@ import ReactPlayer from "react-player";
                             </div>
                         </div>
                         <div className="z-30 w-[900px] h-[350px] flex items-center justify-center">
-                            <div className="h-full w-full max-w-[261px]">
+                            <div className="h-full w-full max-w-[900px]">
                                 {rafflePrize && rafflePrize.photo ? <div className="w-full h-full">
                                     <img className="w-full h-full object-cover" src={convertUrlImage(rafflePrize.photo)} alt="" />
                                 </div> : <p className="text-sm-medium text-gray-light/700">Foto tidak ditemukan</p>}
