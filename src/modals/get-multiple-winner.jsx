@@ -148,7 +148,9 @@ const Modal = ({ data = {}, done, close, counter }) => {
   }, [animationInterval]);
 
   return (
-    <div className="bg-white w-full max-h-[480px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+    
+    <div className="bg-white w-full max-h-[480px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <SimpleBar
         forceVisible="y"
         style={{ maxHeight: "480px" }}

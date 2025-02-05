@@ -43,9 +43,11 @@ const MyModal = ({
         }}
         className="w-full h-screen flex items-center justify-center relative"
         ref={modalRef}>
+
         <div
           style={{
             maxWidth: `900px`,
+            minHeightheight:'900px'
           }}
           className={`h-[90vh] flex items-center overflow-hidden ${
             maxWidth && maxWidth !== 0 ? "w-full" : ""

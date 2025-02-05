@@ -38,7 +38,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
     }
   }, [detail]);
   return (
-    <div className="bg-white min-w-[800px] max-h-[90vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+    <div className="bg-white min-w-[800px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
       <ReactPlayer
         url="/sounds/winning.mp3"
         playing={playWinningSound}
@@ -89,6 +89,38 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
           <footer className="pt-8">
             <hr className="border-gray-light/200" />
             <div className="p-6 flex items-center gap-3">
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             
               <MyButton
                 disabled={!detail || !rafflePrize}
                 expanded

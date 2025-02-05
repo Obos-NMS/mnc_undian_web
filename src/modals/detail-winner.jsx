@@ -39,7 +39,8 @@ import ReactPlayer from "react-player";
         }
     }, [detail]);
         return (
-            <div className="bg-white w-full min-w-[800px] min-h-[60vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+           
+           <div className="bg-white w-full min-w-[800px] min-h-[60vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
                         <ReactPlayer
                 url="/sounds/winning.mp3" // Replace with the actual path to the winning sound file
                 playing={playWinningSound}
@@ -56,6 +57,13 @@ import ReactPlayer from "react-player";
                                 <Firework />
                             </div>
                         </div>
+                        <br/>
+                    
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+             
                         <div className="z-30 p-6 flex flex-col items-center justify-center text-center">
                             <div className="flex flex-col gap-1">
                                 <p className="text-lg-semibold text-gray-light/900">Selamat! kepada pemenang dengan nomor undian</p>
@@ -109,6 +117,18 @@ import ReactPlayer from "react-player";
     )}
 </div>
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+             
                         <footer className="pt-8">
                             <hr className="border-gray-light/200" />
                             <div className="p-6 flex items-center gap-3">
