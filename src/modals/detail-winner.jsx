@@ -70,7 +70,7 @@ import ReactPlayer from "react-player";
                                 <p className="display-sm-semibold text-brand/600">{detail && detail?.identifier_code.split('').join(' ')}</p>
                             </div>
                         </div>
-                        <div className="z-30 w-full h-[350px] flex items-center justify-center">
+                        <div className="z-30 w-full h-full flex items-center justify-center">
                             <div className="h-full w-full max-w-[900px]">
                                 {rafflePrize && rafflePrize.photo ? <div className="w-full h-full">
                                     <img className="w-full h-full object-cover" src={convertUrlImage(rafflePrize.photo)} alt="" />
