@@ -190,6 +190,12 @@
   font-weight: 700;
 }
 
+.hidden-button {
+  opacity: 0;          /* Tombol tidak terlihat */
+  pointer-events: auto; /* Masih bisa diklik */
+  position: absolute;   /* Hindari gangguan layout */
+}
+
 .text-xl-regular,
 .text-xl-medium,
 .text-xl-semibold,

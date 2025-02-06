@@ -48,7 +48,7 @@ const ParticipantList = (winners) => {
         )}
       />
 
-      {columns.filter(column => column.name !== 'No. Urut').map((column) => (
+      {columns.filter(column => column.name == 'Nama Nasabah').map((column) => (
         <MyColumn
           key={column.id}
           header={column.name}

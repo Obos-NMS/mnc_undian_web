@@ -111,42 +111,34 @@ const Modal = ({ data = {}, done, close, counter }) => {
     handleDone();
   };
 
-  const handleKeyDown = (event) => {
-    console.log("Key pressed:", event.code);
-    console.log("Current state:", {
-      isLotteryRunning,
-      canStop,
-      buttonLabel,
-      isFetching,
-    });
-    if (event.code === "Space") {
-      event.preventDefault(); // Prevent default space behavior (scrolling, etc.)
-  
-      if (buttonLabel === "Start" && !isLotteryRunning && !isFetching) {
-        startLottery();
-      } else if (buttonLabel === "Stop" && isLotteryRunning && canStop) {
-        stopLottery();
-      }
-    }
-  };
-
   useEffect(() => {
     setLotteryCodeList(Array.from({ length: 9 }, () => "-"));
-
+  
     getSetting().then((data) => {
       setSetting(data);
     });
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      if (animationInterval) {
-        clearInterval(animationInterval);
+  
+    const handleKeyDown = (event) => {
+      if (event.code === "Space") {
+        event.preventDefault(); // Prevent space from scrolling
+  
+        if (!isFetching) {
+          if (!isLotteryRunning) {
+            startLottery(); // Start lottery if not running
+          } else if (isLotteryRunning && canStop) {
+            stopLottery(); // Stop lottery if running and can stop
+          }
+        }
       }
+    };
+  
+    window.addEventListener("keydown", handleKeyDown);
+  
+    return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [animationInterval]);
-
+  }, [isLotteryRunning, isFetching, canStop]); // Depend on necessary state variables
+  
   return (
     
     <div className="bg-white w-full max-h-[480px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">

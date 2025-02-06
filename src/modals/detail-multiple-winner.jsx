@@ -113,7 +113,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
           </div>
           <footer className="pt-8">
             <hr className="border-gray-light/200" />
-            <div className="p-6 flex items-center gap-3">
+            <div className="p-6 flex items-center gap-3 hidden-button">
               <MyButton
                 disabled={!detail || !rafflePrize}
                 expanded
@@ -128,6 +128,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
                 expanded
                 color={"success"}
                 variant={"filled"}
+                hiddenButton = {true}
                 size={"lg"}
                 onClick={() => setWinner("valid")}>
                 <Lock01 size={20} stroke={"currentColor"} />

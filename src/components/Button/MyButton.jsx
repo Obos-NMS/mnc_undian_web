@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyButton = ({ children, type = "button", color, variant, size, rounded = "lg", disabled = false, expanded = false, onClick }) => {
+const MyButton = ({ children, type = "button", color, variant, size, rounded = "lg", hiddenButton = true, disabled = false, expanded = false, onClick }) => {
     const makeStyle = React.useMemo(() => {
         let className = `${expanded ? 'w-full' : 'w-max'} h-max flex items-center justify-center text-center `;
 

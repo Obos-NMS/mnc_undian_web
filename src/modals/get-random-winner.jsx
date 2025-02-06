@@ -78,19 +78,7 @@ const Modal = ({ data = {}, done, close }) => {
     // }
   };
 
-  const handleKeyDown = (event) => {
-    if (event.code === "Space" && !isFetching ) {
-      console.log(isFetching, 'kqwkkqemememekqwek')
-      if (isLotteryRunning === true) {
-        stopLottery();
-      } else {
-        startLottery();
-      }
-    }
-  };
-
   useEffect(() => {
-    // Initial state with 'A00' + 6 dashes
     setLotteryCodeList(['A', '0', '0', '-', '-', '-', '-', '-', '-']);
   
     getSetting().then((data) => {
@@ -102,20 +90,31 @@ const Modal = ({ data = {}, done, close }) => {
       intervalId = setInterval(() => {
         setLotteryCodeList([
           'A',
-         
-          ...Array.from({ length: 8 }, generateRandomNumber)
+          ...Array.from({ length: 8 }, generateRandomNumber),
         ]);
       }, 100);
     }
   
+    const handleKeyDown = (event) => {
+      if (!isFetching) {
+        if (event.code === "Space") {
+          if (!isLotteryRunning) {
+            startLottery(); // Start lottery if it's not running
+          } else {
+            stopLottery(); // Stop lottery if it's already running
+          }
+        }
+      }
+    };
+  
     window.addEventListener("keydown", handleKeyDown);
-    
+  
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       clearInterval(intervalId);
     };
-  }, [isLotteryRunning]);
-
+  }, [isLotteryRunning, isFetching]); // Depend on state so it updates correctly
+  
   return (
     <div className="bg-white w-full max-h-[480px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
         <br/><br/><br/><br/><br/><br/><br/><br/><br/>

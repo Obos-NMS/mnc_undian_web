@@ -57,7 +57,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
     }, [detail, rafflePrize]); // Ensure this effect runs when the detail or rafflePrize changes
 
     return (
-        <div className="bg-white w-full min-w-[800px] min-h-[60vh] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
+        <div className="bg-white w-full min-w-[800px] min-h-[850px] relative rounded-xl shadow-shadows/shadow-xl overflow-hidden">
             <ReactPlayer
                 url="/sounds/winning.mp3" // Replace with the actual path to the winning sound file
                 playing={playWinningSound}
@@ -118,10 +118,9 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
                             />
                         )}
                     </div>
-                                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     <footer className="pt-8">
                         <hr className="border-gray-light/200" />
-                        <div className="p-6 flex items-center gap-3">
+                        <div className="p-6 flex items-center gap-3 hidden-button">
                             <MyButton disabled={!detail || !rafflePrize} expanded color={"secondary"} variant={"outlined"} size={"lg"}
                                 onClick={close}>
                                 <p className="text-sm-semibold">Tidak simpan</p>
