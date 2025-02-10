@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SimpleBar from "simplebar-react";
 import Reguest from "../services/request";
 import { myToaster } from "../components/Toaster/MyToaster";
-import diceImage from "../assets/get-winner-dice.jpeg";
+import diceImage from "../assets/head-banner.png";
 import ReactPlayer from "react-player";
 import MyButton from "../components/Button/MyButton";
 

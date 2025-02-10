@@ -98,21 +98,7 @@ const Modal = ({ detail = null, rafflePrize = null, done, close }) => {
                                 )
                                     .sort((a, b) => a.participant_field_name.index - b.participant_field_name.index)
                                     .reduce((acc, item) => {
-                                        let maskedValue = item.value;
-
-                                        // Masking logic for item.value
-                                        if (typeof item.value === "string" && item.value.length > 1) {
-                                            let valueArray = item.value.split("");
-                                            const maskCount = Math.floor(item.value.length / 2); // Mask half of the length randomly
-
-                                            for (let i = 0; i < maskCount; i++) {
-                                                const randomIndex = Math.floor(Math.random() * valueArray.length);
-                                                valueArray[randomIndex] = "*";
-                                            }
-                                            maskedValue = valueArray.join("");
-                                        }
-
-                                        acc[item.participant_field_name.name] = maskedValue;
+                                        acc[item.participant_field_name.name] = item.value;
                                         return acc;
                                     }, {})}
                             />
